@@ -56,6 +56,10 @@
     background-repeat: no-repeat;
     z-index: 1;
     height: 250px;
+
+    @media only screen and (max-width: 1100px) {
+        
+    }
 }
 
 .card--front {
@@ -112,7 +116,8 @@
 .form {
     display: flex;
     flex-direction: column;
-    padding: 0 20px
+    padding: 0 20px;
+    max-width: 500px;
 }
 
 .form_section {
@@ -125,6 +130,14 @@
     border: 1px solid var(--light-grayish-violet);
     padding: 10px;
     border-radius: 7px;
+
+    &:focus {
+        outline: 1px solid var(--dark-grayish-violet);
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .input::placeholder {
@@ -150,4 +163,14 @@
     border-radius: 7px;
     font-weight: 400;
     letter-spacing: 1px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.error_msg {
+    color: var(--red);
+    font-size: xx-small;
+    margin-top: 10px;
 }
